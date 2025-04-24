@@ -2,3 +2,7 @@ streamlit
 pandas
 supabase
 python-dotenv
+seaborn
+matplotlib
+chrono
+numpy
