@@ -36,7 +36,9 @@ selected_table = st.sidebar.selectbox("Select table", table_names)
 
 try:
     # Cargar datos
+    st.write("Intentando obtener datos de Supabase...")
     df = get_data(selected_table)
+    st.write("Datos obtenidos:", df)
     
     # Mostrar estadísticas generales
     st.header("General Statistics")
