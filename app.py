@@ -18,6 +18,9 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 st.set_page_config(page_title="Database Statistics", page_icon="📊")
 st.title("Database Statistics Dashboard")
 
+st.write("Tabla seleccionada:", selected_table)  # 👈 nuevo print
+df = get_data(selected_table)
+
 # Función para obtener datos de Supabase
 def get_data(table_name):
     response = supabase.table(table_name).select("*").execute()
