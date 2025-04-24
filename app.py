@@ -26,7 +26,7 @@ def get_data(table_name):
 # Sidebar para selección de tabla
 st.sidebar.title("Settings")
 # Aquí debes reemplazar con los nombres reales de tus tablas
-table_names = ["tabla1", "tabla2", "tabla3"]  
+table_names = ["compras"]  
 selected_table = st.sidebar.selectbox("Select table", table_names)
 
 try:
