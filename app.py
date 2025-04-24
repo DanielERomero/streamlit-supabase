@@ -21,7 +21,9 @@ st.title("Database Statistics Dashboard")
 # Función para obtener datos de Supabase
 def get_data(table_name):
     response = supabase.table(table_name).select("*").execute()
+    st.write("Respuesta cruda:", response)  # 👈 Esto te muestra todo lo que responde Supabase
     return pd.DataFrame(response.data)
+
 
 # Sidebar para selección de tabla
 st.sidebar.title("Settings")
