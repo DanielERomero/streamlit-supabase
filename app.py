@@ -60,4 +60,4 @@ try:
     st.dataframe(df.tail())
 
 except Exception as e:
-    st.error(f"Error accessing the database: {str(e)}")
+   st.exception(e)  # Esto mostrará el traceback del error
