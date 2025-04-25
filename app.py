@@ -97,7 +97,7 @@ if not df.empty:
     # Verificar valores duplicados
     st.header("calidad datos")
     duplicates = filtered_df[filtered_df.duplicated(subset=['id_seguimiento'], keep=False)]
-    st.subheader("Duplicated Records (by id_seguimiento)")
+    st.subheader("valores duplicados ( id_seguimiento)")
     if not duplicates.empty:
         st.write(f"Found {len(duplicates)} duplicated records.")
         st.dataframe(duplicates)
