@@ -105,7 +105,7 @@ if not df.empty:
         st.write("No duplicated records found.")
     
     # Verificar valores nulos
-    st.subheader("Missing Values")
+    st.subheader("valores nulos")
     null_counts = filtered_df.isnull().sum()
     null_df = pd.DataFrame({'Column': null_counts.index, 'Null Count': null_counts.values})
     st.dataframe(null_df[null_df['Null Count'] > 0])
