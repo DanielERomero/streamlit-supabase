@@ -111,7 +111,7 @@ if not df.empty:
     st.dataframe(null_df[null_df['Null Count'] > 0])
     
     # Estadísticas numéricas
-    st.header("Numerical Statistics")
+    st.header("Estdisticas Numericas")
     numeric_cols = ['cantidad_ovas_compradas', 'monto_total_gastado', 'dias_desde_ultima_compra']
     st.dataframe(filtered_df[numeric_cols].describe())
     
