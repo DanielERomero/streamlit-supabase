@@ -116,7 +116,7 @@ if not df.empty:
     st.dataframe(filtered_df[numeric_cols].describe())
     
     # Detectar outliers
-    st.subheader("Outliers Detection")
+    st.subheader("Outliers ")
     for col in numeric_cols:
         outliers = detect_outliers(filtered_df, col)
         st.write(f"Outliers in {col}: {len(outliers)}")
