@@ -87,7 +87,7 @@ if not df.empty:
     ]
     
     # Mostrar métricas generales
-    st.header("General Statistics")
+    st.header("Estadisticos")
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Total Records", len(filtered_df))
     col2.metric("Unique Clients", filtered_df['id_cliente'].nunique())
