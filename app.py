@@ -19,7 +19,7 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Configuración de la página
 st.set_page_config(page_title="Enhanced Database Statistics", page_icon="📊", layout="wide")
-st.title("Enhanced Database Statistics Dashboard")
+st.title("Estadísticas de bases de datos")
 
 # Función para parsear fechas de manera segura
 def safe_parse_date(date_str):
