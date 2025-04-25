@@ -95,7 +95,7 @@ if not df.empty:
     col4.metric("Latest Contact", filtered_df['fecha_contacto'].max().strftime('%Y-%m-%d') if filtered_df['fecha_contacto'].notna().any() else "N/A")
     
     # Verificar valores duplicados
-    st.header("Valores duplicados")
+    st.header("calidad datos")
     duplicates = filtered_df[filtered_df.duplicated(subset=['id_seguimiento'], keep=False)]
     st.subheader("Duplicated Records (by id_seguimiento)")
     if not duplicates.empty:
