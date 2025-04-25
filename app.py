@@ -150,36 +150,6 @@ if not df.empty:
         ax.set_ylabel("Frequency")
         st.pyplot(fig)
     
-    
-    # Insights adicionales
-    st.header("Additional Insights")
-    # Clientes con múltiples registros
-    client_counts = filtered_df['id_cliente'].value_counts()
-    repeated_clients = client_counts[client_counts > 1]
-    st.subheader("Clients with Multiple Records")
-    if not repeated_clients.empty:
-        st.write(f"Found {len(repeated_clients)} clients with multiple records.")
-        st.dataframe(repeated_clients)
-    else:
-        st.write("No clients with multiple records.")
-    
-    # Registros sin compras
-    no_purchases = filtered_df[filtered_df['cantidad_ovas_compradas'] == 0]
-    st.subheader("Records with No Purchases")
-    st.write(f"Found {len(no_purchases)} records with zero purchases.")
-    if not no_purchases.empty:
-        st.dataframe(no_purchases.head())
-    
-    # Registros con última compra antigua
-    old_purchases = filtered_df[filtered_df['dias_desde_ultima_compra'] > 1000]
-    st.subheader("Records with Last Purchase > 1000 Days Ago")
-    st.write(f"Found {len(old_purchases)} records with last purchase over 1000 days ago.")
-    if not old_purchases.empty:
-        st.dataframe(old_purchases.head())
-    
-    # Mostrar datos crudos
-    st.header("Raw Data")
-    st.dataframe(filtered_df)
 
 else:
     st.error("No data available to display.")
