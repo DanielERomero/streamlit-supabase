@@ -70,7 +70,7 @@ def detect_outliers(df, column):
     return outliers
 
 # Sidebar para selección de tabla y filtros
-st.sidebar.title("Settings")
+st.sidebar.title("Opciones")
 table_names = ["compras"]
 selected_table = st.sidebar.selectbox("Select table", table_names)
 estatus_filter = st.sidebar.multiselect("Filter by estatus_llamada", ["CONTESTO", "NO CONTESTO"], default=["CONTESTO", "NO CONTESTO"])
