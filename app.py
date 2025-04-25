@@ -150,13 +150,6 @@ if not df.empty:
         ax.set_ylabel("Frequency")
         st.pyplot(fig)
     
-    # Matriz de correlación
-    st.header("Correlation Matrix")
-    corr = filtered_df[numeric_cols].corr()
-    fig, ax = plt.subplots()
-    sns.heatmap(corr, annot=True, cmap='coolwarm', ax=ax)
-    ax.set_title("Correlation Matrix of Numerical Columns")
-    st.pyplot(fig)
     
     # Insights adicionales
     st.header("Additional Insights")
