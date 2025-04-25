@@ -73,8 +73,8 @@ def detect_outliers(df, column):
 st.sidebar.title("Opciones")
 table_names = ["compras"]
 selected_table = st.sidebar.selectbox("Select table", table_names)
-estatus_filter = st.sidebar.multiselect("Filter by estatus_llamada", ["CONTESTO", "NO CONTESTO"], default=["CONTESTO", "NO CONTESTO"])
-cotizacion_filter = st.sidebar.multiselect("Filter by cotizacion", [0, 1], default=[0, 1])
+estatus_filter = st.sidebar.multiselect("estatus_llamada", ["CONTESTO", "NO CONTESTO"], default=["CONTESTO", "NO CONTESTO"])
+cotizacion_filter = st.sidebar.multiselect("cotizacion", [0, 1], default=[0, 1])
 
 # Cargar datos
 df = get_data(selected_table)
